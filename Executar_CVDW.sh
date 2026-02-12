@@ -32,7 +32,7 @@ trap cleanup EXIT
 echo "$(date '+%Y-%m-%d %H:%M:%S') - Iniciando execução do CVDW-CLI (PID: $$)"
 
 # Executa redirecionando output para arquivo (evita flood de logs no Railway)
-bash -ic "cvdw executar all -qtd 500" >> "$LOGFILE" 2>&1
+bash -ic "cvdw executar all" >> "$LOGFILE" 2>&1
 EXIT_CODE=$?
 
 # Exibe as últimas linhas do log no stdout para monitoramento
